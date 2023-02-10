@@ -5,4 +5,4 @@ const Order = require("./Order");
 
 
 // Export as an object
-module.exports = { User };
+module.exports = { User, Order };
