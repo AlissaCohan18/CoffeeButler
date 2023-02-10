@@ -1,3 +1,6 @@
+// the Order model will hold the 
+// drink order, add-ons for the order, and nickname of the order
+
 const { Model, DataTypes } = require("sequelize");
 
 const sequelize = require("../config/connection");
@@ -14,21 +17,23 @@ Order.init(
             primaryKey: true,
             autoIncrement: true
         },
-    // define drink column
+    // define drink column in table
     drink:{
         type: DataTypes.TEXT,
         
     },
 
-    // define add-ons column
+    // define add-ons column in table
     addon: {
         type: DataTypes.TEXT,
     },
-    // what will the user name their drink order? this should also allow them to reorder nicknamed drinks
+    // what will the user name their drink order? 
+    // this should also allow them to reorder nicknamed drinks?
     nickname:{
         type: DataTypes.TEXT,
         allowNull: false,
         validate: {
+            // requiring at least two characters
             len:[2]
         },
      },
