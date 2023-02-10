@@ -20,7 +20,12 @@ Order.init(
         type: DataTypes.TEXT,
         
     },
-    
+    // define add-ons column
+    addon: {
+        type: DataTypes.TEXT
+    },
+
+
 
         },
 
