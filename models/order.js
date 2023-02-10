@@ -15,14 +15,14 @@ Order.init(
             autoIncrement: true
         },
     // define drink column
-        
     drink:{
         type: DataTypes.TEXT,
         
     },
+    
     // define add-ons column
     addon: {
-        type: DataTypes.TEXT
+        type: DataTypes.TEXT,
     },
 
 
