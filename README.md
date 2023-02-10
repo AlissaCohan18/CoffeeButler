@@ -1,4 +1,4 @@
-## The Cofee Butler
+## The Coffee Butler
 
 ## Description:
 
