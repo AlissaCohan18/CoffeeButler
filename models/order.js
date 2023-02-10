@@ -19,11 +19,19 @@ Order.init(
         type: DataTypes.TEXT,
         
     },
-    
+
     // define add-ons column
     addon: {
         type: DataTypes.TEXT,
     },
+    // what will the user name their drink order? this should also allow them to reorder nicknamed drinks
+    nickname:{
+        type: DataTypes.TEXT,
+        allowNull: false,
+        validate: {
+            len:[2]
+        },
+     },
 
 
 
