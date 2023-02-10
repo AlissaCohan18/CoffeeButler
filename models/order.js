@@ -14,7 +14,14 @@ Order.init(
             primaryKey: true,
             autoIncrement: true
         },
+    // define drink column
+        
+    drink:{
+        type: DataTypes.TEXT,
+        
+    },
     
+
         },
 
         {sequelize,
