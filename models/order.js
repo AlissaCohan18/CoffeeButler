@@ -17,13 +17,13 @@ Order.init(
             primaryKey: true,
             autoIncrement: true
         },
-    // define drink column in table
-    drink:{
+    // define menu column in table
+    menuitem: {
         type: DataTypes.TEXT,
-        
+        allowNull:false
     },
 
-    // define add-ons column in table
+    // define add-ons column in table | this will be an additional drink or snack etc.
     addon: {
         type: DataTypes.TEXT,
     },
