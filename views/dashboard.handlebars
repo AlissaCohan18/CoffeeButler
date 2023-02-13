@@ -28,82 +28,139 @@
 <div class="row">
   <div class="col-md-8">
     <div class="pb-3">
-      ads
+      
+{{!-- Order Module --}}
+<div class="container">
+  <div class="card float-right col" style="width: 18rem;">
+    {{!-- drink box --}}
+    <div class="card-header text-white" style="background-color:#967969">
+      What will you order today?
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Latte | $54.99
+          </label>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Expresso | $43.99
+          </label>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Expresso | $23.99
+          </label>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Bustling Springs Water | $74.99
+          </label>
+        </div>
+      </li>
+    </ul>
+  </div>
+<br>
+<br>
+{{!-- pastries box --}}
+<div class="card float-right col" style="width: 18rem;">
+  <div class="card-header text-white" style="background-color:#9A2A2A">
+    Tasty Pastries
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Vanilla Crossant | $23.00
+        </label>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Muffin | $24.00
+        </label>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Breakfast Sandwich | $35.00
+        </label>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Hot Air Pocket | $55.00
+        </label>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<br>
+<br>
+{{!-- current order box --}}
+<div class="card float-right col" style="width: 18rem;">
+  <div class="card-header text-white" style="background-color:#808000">
+    Your Order
+  </div>
+  {{!-- things to append selected orders w/JS --}}
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"> Ordered Item</li>
+    <li class="list-group-item"> Ordered Item</li>
+    <li class="list-group-item"> Ordered Item</li>
+    <a href="#" class="btn "style="background-color:#808000;"> Place Order</a>
+  </ul>
+</div>
+</div>
     </div>
     <div class="row">
       <div class="col-md-6"> </div>
       <div class="col-md-6">.col-md-6</div>
     </div>
   </div>
-  {{!-- column on the right --}}
-  <div class="col-md-4">Previous Orders</div>
+  {{!-- Previous Orders Column--}}
+  <div class="col-md-4">Previous Orders 
+    <div>
+      <div class="card w-75">
+        {{!-- order1 --}}
+  <div class="card-body">
+    <h5 class="card-title">LowKey Sleepy </h5>
+    <ul class="card-text">
+      <li> MenuItem | $Price</li>
+      <li> AddOns | $Price</li>
+    </ul>
+    <a href="#" class="btn "style="background-color:#C4A484;">Reorder</a>
+  </div>
+    {{!-- order 2 --}}
+  <div class="card-body">
+    <h5 class="card-title">HumpDay Special </h5>
+    <ul class="card-text">
+      <li> MenuItem | $Price</li>
+      <li> AddOns | $Price</li>
+    </ul>
+    <a href="#" class="btn" style="background-color:#C4A484;">Reorder</a>
+  </div>
+  </div>
+</div>
+    </div>
+  </div>
   
-</div>
-
-{{!--  Order Module --}}
-<div class="container">
-<div class="card float-right col" style="width: 18rem;">
-  <div class="card-header" style="">
-   What will you order today?
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item"> <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-  <label class="form-check-label" for="flexCheckDefault">
-    Latte | $54.99
-  </label>
-</div></li>
-    <li class="list-group-item"> <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-  <label class="form-check-label" for="flexCheckDefault">
-    Expresso | $43.99
-  </label>
-</div></li>
-    <li class="list-group-item"> <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-  <label class="form-check-label" for="flexCheckDefault">
-   Expresso | $23.99
-  </label>
-</div></li>
-    <li class="list-group-item"> <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-  <label class="form-check-label" for="flexCheckDefault">
-    Bustling Springs Water | $74.99
-  </label>
-</div></li>
-  </ul>
-</div>
-<br>
-<br>
-<div class="card float-right col" style="width: 18rem;">
-  <div class="card-header" style="">
-   Tasty Pastries
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item"><div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-  <label class="form-check-label" for="flexCheckDefault">
-    Vanilla Crossant | $23.00 
-  </label>
-</div></li>
-    <li class="list-group-item"> <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-  <label class="form-check-label" for="flexCheckDefault">
-    Muffin | $24.00 
-  </label>
-</div></li>
-    <li class="list-group-item"><div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-  <label class="form-check-label" for="flexCheckDefault">
-    Breakfast Sandwich | $35.00
-  </label>
-</div> </li>
-    <li class="list-group-item"> <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-  <label class="form-check-label" for="flexCheckDefault">
-    Hot Air Pocket | $55.00 
-  </label>
-</div></li>
-  </ul>
-</div>
 </div>
