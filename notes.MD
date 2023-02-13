@@ -2,7 +2,7 @@
 * Arnasia: front end updates (login/create user form, order page)
 * Ozy: models (sequelize)
 * Marques: routes ("controllers") - create new order, view previous orders
-* Montine: db seeding (menu items? users?)
+* Montine: db seeding (menu items && users)
 * Alissa:  add session/cookies for personalized user experience
           
 # Unassigned:
