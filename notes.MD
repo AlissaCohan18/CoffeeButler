@@ -4,7 +4,7 @@
 * Marques: routes ("controllers") - create new order, view previous orders
 * Montine: db seeding (menu items? users?)
 * Alissa:  add session/cookies for personalized user experience
-          verify logout works (via front-end button once created)
+          
 # Unassigned:
 * javacript to connect front & back ends
 * deploy on heroku
