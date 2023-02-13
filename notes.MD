@@ -1,6 +1,7 @@
 # To Do:
 * frontend: dashboard/order page
 * db seeding: menu items and users
+* create table relationships in models/index.js
 * javaScript: add order / edit order
 * deploy on heroku
 
