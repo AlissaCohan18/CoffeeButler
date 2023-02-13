@@ -13,11 +13,7 @@ router.get("/signup", (req, res) => {
 });
 
 router.get("/dashboard", (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect("dashboard");
-    return;
-  }
-  res.render("homepage");
+   res.render("dashboard");
 });
   
 
