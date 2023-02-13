@@ -1,6 +1,6 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-light ">
 	  <div class="container-fluid">
-		<a class="navbar-brand text=" href="#" > CoffeeButler</a>
+		<a class="navbar-brand " href="#" > CoffeeButler</a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		  <span class="navbar-toggler-icon"></span>
 		</button>
@@ -24,10 +24,19 @@
   <br>
   <br>
 
+
+<div>
 <div class="row">
+  {{!-- drink ads carousel column --}}
   <div class="col-md-8">
     <div class="pb-3">
-      
+  
+    <div class="row">
+
+
+      {{!-- Make an order column --}}
+      <div class="col-md-6"> 
+           
 {{!-- Order Module --}}
 <div class="container">
   <div class="card float-right col" style="width: 18rem;">
@@ -130,37 +139,75 @@
 </div>
 </div>
     </div>
-    <div class="row">
-      <div class="col-md-6"> </div>
-      <div class="col-md-6">.col-md-6</div>
+
+      </div>
+
+
+
+      {{!-- Pending orders --}}
+      <div class="col-md-6"> 
+        
+      </div>
     </div>
   </div>
+
+
+
   {{!-- Previous Orders Column--}}
-  <div class="col-md-4">Previous Orders 
+  <div class="col-md-4">
+    <h4> Pending Orders</h4>
     <div>
       <div class="card w-75">
         {{!-- order1 --}}
-  <div class="card-body">
-    <h5 class="card-title">LowKey Sleepy </h5>
-    <ul class="card-text">
-      <div> MenuItem | $Price</div>
-      
-      <div> AddOns | $Price</div>
-    </ul>
-    <a href="#" class="btn text-white "style="background-color:#C4A484;">Reorder</a>
-  </div>
-    {{!-- order 2 --}}
-  <div class="card-body">
-    <h5 class="card-title">HumpDay Special </h5>
-    <ul class="card-text">
-      <div> MenuItem | $Price</div>
-      <div> AddOns | $Price</div>
-    </ul>
-    <a href="#" class="btn text-white" style="background-color:#C4A484;">Reorder</a>
-  </div>
+        <div class="card-body">
+          <h5 class="card-title">LowKey Sleepy </h5>
+          <ul class="card-text">
+            <div> MenuItem | $Price</div>
+  
+            <div> AddOns | $Price</div>
+          </ul>
+          <a href="#" class="btn text-white " style="background-color:#C4A484;">Reorder</a>
+        </div>
+        {{!-- order 2 --}}
+        <div class="card-body">
+          <h5 class="card-title">HumpDay Special </h5>
+          <ul class="card-text">
+            <div> MenuItem | $Price</div>
+            <div> AddOns | $Price</div>
+          </ul>
+          <a href="#" class="btn text-white" style="background-color:#C4A484;">Reorder</a>
+        </div>
+      </div>
+    </div>
+    <h4> Previous Orders</h4>
+<div>
+      <div class="card w-75">
+        {{!-- order1 --}}
+        <div class="card-body">
+          <h5 class="card-title">LowKey Sleepy </h5>
+          <ul class="card-text">
+            <div> MenuItem | $Price</div>
+  
+            <div> AddOns | $Price</div>
+          </ul>
+          <a href="#" class="btn text-white " style="background-color:#C4A484;">Reorder</a>
+        </div>
+        {{!-- order 2 --}}
+        <div class="card-body">
+          <h5 class="card-title">HumpDay Special </h5>
+          <ul class="card-text">
+            <div> MenuItem | $Price</div>
+            <div> AddOns | $Price</div>
+          </ul>
+          <a href="#" class="btn text-white" style="background-color:#C4A484;">Reorder</a>
+        </div>
+      </div>
+    </div>
+
+
+
   </div>
 </div>
-    </div>
-  </div>
   
+</div>
 </div>
