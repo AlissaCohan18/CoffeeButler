@@ -13,9 +13,9 @@ router.get('/', (req, res) => {
           console.log(err);
           res.status(500).json(err);
         });
-
 });
 
+router.get('/:id:', (req, res) => {
 //Get a single order
 NewOrder.findOne({
     where: {
@@ -39,6 +39,7 @@ NewOrder.findOne({
       console.log(err);
       res.status(500).json(err);
     });
+  });
 
 //Post request for New Orders
 router.post('/', (req, res) => {
