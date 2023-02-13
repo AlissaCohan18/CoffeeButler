@@ -1,11 +1,22 @@
 const router = require("express").Router();
 const { User } = require("../../models");
 
+// get all users
+router.get('/', (req, res) => {
+     User.findAll({
+      attributes: { exclude: ['password'] }
+    })
+      .then(dbUserData => res.json(dbUserData))
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+
 // Create new User (localhost:3001/api/users)
 router.post("/", (req, res) => {
-  // expected input {"username": "YourUserName","email": "email.com","password": "password123"}
+  // expected input {"email": "email.com","password": "password123"}
   User.create({
-    username: req.body.username,
     email: req.body.email,
     password: req.body.password,
   }).then((dbUserData) => {
@@ -15,7 +26,7 @@ router.post("/", (req, res) => {
 
 //user login and identity verification (/api/users/login)
 router.post("/login", (req, res) => {
-  // expected input {email: 'email.com', password: 'password1234'}
+  // expected input {"email": "email.com","password": "password123"}
   User.findOne({
     where: {
       email: req.body.email,
