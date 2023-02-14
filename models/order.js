@@ -38,8 +38,6 @@ Order.init(
         },
      },
 
-
-
         },
 
         {sequelize,
