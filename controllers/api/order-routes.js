@@ -4,7 +4,7 @@ const { order } = require('../../models');
 //Get all orders
 router.get('/', (req, res) => {
     order.findAll({
-        attributes: ['id','menuitem', 'addon', 'nickname', 'created_at'],
+        attributes: ['id','drink', 'pastry', 'created_at'],
         order: [['created_at', 'DESC']],
         })
 
@@ -23,8 +23,8 @@ order.findOne({
     },
     attributes: [
       'id',
-      'menuitem',
-      'addon',
+      'drink',
+      'pastry',
       'created_at',
     ],
   })
@@ -45,9 +45,9 @@ order.findOne({
 router.post('/', (req, res) => {
     order.create({
         id: req.body.id,
-        menuitem: req.body.menuitem,
-        addon: req.body.addon,
-        nickname: req.body.nickname
+        drink: req.body.drink,
+        pastry: req.body.pastry
+        
        })
         .then(dborderData => res.json(dborderData))
         .catch(err => {
