@@ -1,11 +1,15 @@
 const router = require('express').Router();
-const { order } = require('../../models');
+
+const { Order } = require('../../models');
+
+
 //const withAuth = require('../../utils/auth');
+
 
 //Get all orders
 router.get('/', (req, res) => {
-    order.findAll({
-        attributes: ['id','menuitem', 'addon', 'nickname', 'created_at'],
+    Order.findAll({
+        attributes: ['id','drink','created_at'],
         order: [['created_at', 'DESC']],
         })
 
@@ -18,14 +22,13 @@ router.get('/', (req, res) => {
 
 router.get('/:id:', (req, res) => {
 //Get a single order
-order.findOne({
+Order.findOne({
     where: {
       id: req.params.id
     },
     attributes: [
       'id',
-      'menuitem',
-      'addon',
+      'drink',
       'created_at',
     ],
   })
@@ -42,15 +45,12 @@ order.findOne({
     });
   });
 
-  //Post request for new orders
-  //router.post('/', withAuth, (req, res) => {
-router.post('/', (req, res) => {
-    order.create({
-        id: req.body.id,
-        menuitem: req.body.menuitem,
-        addon: req.body.addon,
-        nickname: req.body.nickname
-       })
+//Post request for new orders
+router.post('/dashboard', (req, res) => {
+    Order.create({
+        drink: req.body.drink
+  //router.post('/dashboard', withAuth, (req, res) => {
+})
         .then(dborderData => res.json(dborderData))
         .catch(err => {
         console.log(err);
@@ -63,7 +63,7 @@ router.post('/', (req, res) => {
 // PUT - Update existing order
 //router.put('/:id', withAuth, (req, res) => {
 router.put('/:id', (req, res) => {
-  order.update(req.body, {
+  Order.update(req.body, {
     where: {
     id: req.params.id
     }
@@ -82,9 +82,12 @@ router.put('/:id', (req, res) => {
 });
    
 // Delete request for orders by id
+
+router.delete('/:id', (req, res) => {
+    Order.destroy({
+
 //router.delete('/:id', withAuth, (req, res) => {
-router.delete('/:id',(req, res) => {
-    order.destroy({
+
         where: {
           id: req.params.id
         }
