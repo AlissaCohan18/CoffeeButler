@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const { order } = require('../../models');
+const { Order } = require('../../models');
 
 //Get all orders
 router.get('/', (req, res) => {
-    order.findAll({
-        attributes: ['id','drink', 'pastry', 'created_at'],
+    Order.findAll({
+        attributes: ['id','drink','created_at'],
         order: [['created_at', 'DESC']],
         })
 
@@ -17,14 +17,13 @@ router.get('/', (req, res) => {
 
 router.get('/:id:', (req, res) => {
 //Get a single order
-order.findOne({
+Order.findOne({
     where: {
       id: req.params.id
     },
     attributes: [
       'id',
       'drink',
-      'pastry',
       'created_at',
     ],
   })
@@ -42,12 +41,9 @@ order.findOne({
   });
 
 //Post request for new orders
-router.post('/', (req, res) => {
-    order.create({
-        id: req.body.id,
-        drink: req.body.drink,
-        pastry: req.body.pastry
-        
+router.post('/dashboard', (req, res) => {
+    Order.create({
+        drink: req.body.drink
        })
         .then(dborderData => res.json(dborderData))
         .catch(err => {
@@ -60,7 +56,7 @@ router.post('/', (req, res) => {
 
 // PUT - Update existing order
 router.put('/:id', (req, res) => {
-  order.update(req.body, {
+  Order.update(req.body, {
     where: {
     id: req.params.id
     }
@@ -81,7 +77,7 @@ router.put('/:id', (req, res) => {
 
 // Delete request for orders by id
 router.delete('/:id', (req, res) => {
-    order.destroy({
+    Order.destroy({
         where: {
           id: req.params.id
         }
