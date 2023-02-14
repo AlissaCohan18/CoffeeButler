@@ -1,14 +1,14 @@
 const router = require('express').Router();
-const { NewOrder } = require('../../models');
+const { order } = require('../../models');
 
 //Get all orders
 router.get('/', (req, res) => {
-    NewOrder.findAll({
+    order.findAll({
         attributes: ['id','menuitem', 'addon', 'nickname', 'created_at'],
         order: [['created_at', 'DESC']],
         })
 
-        .then(dbNewOrderData => res.json(dbNewOrderData))
+        .then(dborderData => res.json(dborderData))
         .catch(err => {
           console.log(err);
           res.status(500).json(err);
@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
 
 router.get('/:id:', (req, res) => {
 //Get a single order
-NewOrder.findOne({
+order.findOne({
     where: {
       id: req.params.id
     },
@@ -28,12 +28,12 @@ NewOrder.findOne({
       'created_at',
     ],
   })
-    .then(dbNewOrderData => {
-      if (!dbNewOrderData) {
+    .then(dborderData => {
+      if (!dborderData) {
         res.status(404).json({ message: 'No order found with this id' });
         return;
       }
-      res.json(dbNewOrderData);
+      res.json(dborderData);
     })
     .catch(err => {
       console.log(err);
@@ -43,13 +43,13 @@ NewOrder.findOne({
 
 //Post request for new orders
 router.post('/', (req, res) => {
-    NewOrder.create({
+    order.create({
         id: req.body.id,
         menuitem: req.body.menuitem,
         addon: req.body.addon,
         nickname: req.body.nickname
        })
-        .then(dbNewOrderData => res.json(dbNewOrderData))
+        .then(dborderData => res.json(dborderData))
         .catch(err => {
         console.log(err);
         res.status(400).json(err);
@@ -60,17 +60,17 @@ router.post('/', (req, res) => {
 
 // PUT - Update existing order
 router.put('/:id', (req, res) => {
-  NewOrder.update(req.body, {
+  order.update(req.body, {
     where: {
     id: req.params.id
     }
   })
-    .then(dbNewOrderData => {
-    if (!dbNewOrderData[0]) {
+    .then(dborderData => {
+    if (!dborderData[0]) {
     res.status(404).json({ message: 'No order found with this id' });
     return;
     }
-    res.json(dbNewOrderData);
+    res.json(dborderData);
     })
     .catch(err => {
     console.log(err);
@@ -81,17 +81,17 @@ router.put('/:id', (req, res) => {
 
 // Delete request for orders by id
 router.delete('/:id', (req, res) => {
-    NewOrder.destroy({
+    order.destroy({
         where: {
           id: req.params.id
         }
       })
-        .then(dbNewOrderData => {
-          if (!dbNewOrderData) {
+        .then(dborderData => {
+          if (!dborderData) {
             res.status(404).json({ message: 'No order found with this id' });
             return;
           }
-          res.json(dbNewOrderData);
+          res.json(dborderData);
         })
         .catch(err => {
           console.log(err);
