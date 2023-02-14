@@ -86,15 +86,9 @@
               <div class="card float-right col" style="width: 18rem;">
                 {{!-- drink box --}}
                 <div class="card-header text-white" style="background-color:#967969">
-                  Drank
+                  Drink Order
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <div class="input-group input-group-sm mb-3">
-                      <span class="input-group-text" id="inputGroup-sizing-sm">Coffee</span>
-                      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Quantity & Size">
-                    </div>
-                  </li>
                   <li class="list-group-item">
                     <div class="form-check">
                       <label class="form-check-label" for="flexCheckDefault">
@@ -106,7 +100,7 @@
                     <div class="form-check">
                       
                       <label class="form-check-label" for="flexCheckDefault">
-                        MEDIUM | $43.99
+                        Medium | $43.99
                       </label>
                     </div>
                   </li>
@@ -117,20 +111,27 @@
                       </label>
                     </div>
                   </li>
+                  <li class="list-group-item">
+                    <div class="input-group input-group-sm mb-3">
+                      
+                      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Quantity & Size">
+                    </div>
+                  </li>
+                  <a href="#" class="btn text-white" style="background-color:#808000;"> Place Order</a>
                 </ul>
               </div>
               <br>
               <br>
    {{!-- pastries box --}}
-              <div class="card float-right col" style="width: 18rem;">
+              {{!-- <div class="card float-right col" style="width: 18rem;">
                 <div class="card-header text-white" style="background-color:#9A2A2A">
                   Tasty Pastries
                 </div>
                  <ul class="list-group list-group-flush">
                   <li class="list-group-item">
-                    <div class="input-group input-group-sm mb-3">
-                      <span class="input-group-text" id="inputGroup-sizing-sm">Pastry</span>
-                      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Quantity & Pastry">
+                    <div class="input-group input-group-sm mb-3"> --}}
+                      {{!-- <span class="input-group-text" id="inputGroup-sizing-sm">Pastry</span> --}}
+                      {{!-- <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Quantity & Pastry">
                     </div>
                   </li>
                   <li class="list-group-item">
@@ -149,33 +150,29 @@
                     </div>
                   </li>
                 </ul>
-              </div>
+              </div> --}}
 
               <br>
               <br>
-              {{!-- current order box --}}
-              <div class="card float-right col" style="width: 18rem;">
+            
+              {{!-- <div class="card float-right col" style="width: 18rem;">
                 <div class="card-header text-white" style="background-color:#808000">
                   Your Order
                 </div>
-                {{!-- styling to to append when checkbox is selected orders w/JS --}}
+                
                 <ul class="list-group list-group-flush ">
-                  {{!-- add a delete button --}}
+                  
                   <li class="list-group-item ">Ordered Item <button type="button" class="btn btn-outline-danger float-end">   <ion-icon name="trash-outline"></ion-icon></button></li> 
                   <li class="list-group-item">Ordered Item<button type="button" class="btn btn-outline-danger float-end">   <ion-icon name="trash-outline"></ion-icon></button></li>
                   <li class="list-group-item"> Ordered Item<button type="button" class="btn btn-outline-danger float-end">  <ion-icon name="trash-outline"></ion-icon></button></li>
                   <a href="#" class="btn text-white" style="background-color:#808000;"> Place Order</a>
                 </ul>
-              </div>
+              </div> --}}
             </div>
           </div>
 
         </div>
 
-        {{!-- Pending orders Column--}}
-        <div class="col-md-6">
-
-        </div>
       </div>
     </div>
 
