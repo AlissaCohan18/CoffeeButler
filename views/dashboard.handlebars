@@ -21,9 +21,7 @@
     {{!-- functional icons --}}
 
     {{!-- logout --}}
-    <a>
-      <ion-icon name="log-out-outline"></ion-icon>
-    </a>
+
     {{!-- profile icon --}}
     <a><img
       src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg"
@@ -74,7 +72,7 @@
 {{!-- carousel end --}}
 
 
-  <h4> New Order</h4>
+  <h4> New Order </h4>
   <div class="row">
     {{!-- drink ads carousel column --}}
     <div class="col-md-8">
@@ -88,38 +86,34 @@
               <div class="card float-right col" style="width: 18rem;">
                 {{!-- drink box --}}
                 <div class="card-header text-white" style="background-color:#967969">
-                  Drink Corner
+                  Drank
                 </div>
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">
+                    <div class="input-group input-group-sm mb-3">
+                      <span class="input-group-text" id="inputGroup-sizing-sm">Coffee</span>
+                      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Quantity & Size">
+                    </div>
+                  </li>
+                  <li class="list-group-item">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                       <label class="form-check-label" for="flexCheckDefault">
-                        Latte | $54.99
+                       Small | $23.99
                       </label>
                     </div>
                   </li>
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      
                       <label class="form-check-label" for="flexCheckDefault">
-                        Expresso | $43.99
+                        MEDIUM | $43.99
                       </label>
                     </div>
                   </li>
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                       <label class="form-check-label" for="flexCheckDefault">
-                        Expresso | $23.99
-                      </label>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label class="form-check-label" for="flexCheckDefault">
-                        Bustling Springs Water | $74.99
+                        LARGE | $74.99
                       </label>
                     </div>
                   </li>
@@ -127,41 +121,30 @@
               </div>
               <br>
               <br>
-              {{!-- pastries box --}}
+   {{!-- pastries box --}}
               <div class="card float-right col" style="width: 18rem;">
                 <div class="card-header text-white" style="background-color:#9A2A2A">
                   Tasty Pastries
                 </div>
-                <ul class="list-group list-group-flush">
+                 <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <div class="input-group input-group-sm mb-3">
+                      <span class="input-group-text" id="inputGroup-sizing-sm">Pastry</span>
+                      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Quantity & Pastry">
+                    </div>
+                  </li>
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                       <label class="form-check-label" for="flexCheckDefault">
-                        Vanilla Crossant | $23.00
+                       Croissant | $23.00
                       </label>
                     </div>
                   </li>
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      
                       <label class="form-check-label" for="flexCheckDefault">
-                        Muffin | $24.00
-                      </label>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label class="form-check-label" for="flexCheckDefault">
-                        Breakfast Sandwich | $35.00
-                      </label>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label class="form-check-label" for="flexCheckDefault">
-                        Hot Air Pocket | $55.00
+                        Danish | $24.00
                       </label>
                     </div>
                   </li>
@@ -176,10 +159,11 @@
                   Your Order
                 </div>
                 {{!-- styling to to append when checkbox is selected orders w/JS --}}
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item"> Ordered Item</li>
-                  <li class="list-group-item"> Ordered Item</li>
-                  <li class="list-group-item"> Ordered Item</li>
+                <ul class="list-group list-group-flush ">
+                  {{!-- add a delete button --}}
+                  <li class="list-group-item ">Ordered Item <button type="button" class="btn btn-outline-danger float-end">   <ion-icon name="trash-outline"></ion-icon></button></li> 
+                  <li class="list-group-item">Ordered Item<button type="button" class="btn btn-outline-danger float-end">   <ion-icon name="trash-outline"></ion-icon></button></li>
+                  <li class="list-group-item"> Ordered Item<button type="button" class="btn btn-outline-danger float-end">  <ion-icon name="trash-outline"></ion-icon></button></li>
                   <a href="#" class="btn text-white" style="background-color:#808000;"> Place Order</a>
                 </ul>
               </div>

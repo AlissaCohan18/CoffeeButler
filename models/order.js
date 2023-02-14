@@ -18,13 +18,13 @@ Order.init(
             autoIncrement: true
         },
     // define menu column in table
-    menuitem: {
+    drink: {
         type: DataTypes.TEXT,
         allowNull:false
     },
 
     // define add-ons column in table | this will be an additional drink or snack etc.
-    addon: {
+    pastry: {
         type: DataTypes.TEXT,
     },
     // what will the user name their drink order? 
