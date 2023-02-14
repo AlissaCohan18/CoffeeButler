@@ -41,7 +41,7 @@ NewOrder.findOne({
     });
   });
 
-//Post request for New Orders
+//Post request for new orders
 router.post('/', (req, res) => {
     NewOrder.create({
         id: req.body.id,
@@ -58,7 +58,28 @@ router.post('/', (req, res) => {
 
 });
 
-// Delete request for Orders by id
+// PUT - Update existing order
+router.put('/:id', (req, res) => {
+  NewOrder.update(req.body, {
+    where: {
+    id: req.params.id
+    }
+  })
+    .then(dbNewOrderData => {
+    if (!dbNewOrderData[0]) {
+    res.status(404).json({ message: 'No order found with this id' });
+    return;
+    }
+    res.json(dbNewOrderData);
+    })
+    .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+});
+   
+
+// Delete request for orders by id
 router.delete('/:id', (req, res) => {
     NewOrder.destroy({
         where: {
