@@ -24,9 +24,9 @@ Order.init(
     },
 
     // define add-ons column in table | this will be an additional drink or snack etc.
-    pastry: {
-        type: DataTypes.TEXT,
-    },
+    // pastry: {
+    //     type: DataTypes.TEXT,
+    // },
     // what will the user name their drink order? 
     // this should also allow them to reorder nicknamed drinks?
     nickname:{

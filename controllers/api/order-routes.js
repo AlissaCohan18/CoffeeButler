@@ -1,5 +1,10 @@
 const router = require('express').Router();
+
 const { Order } = require('../../models');
+
+
+//const withAuth = require('../../utils/auth');
+
 
 //Get all orders
 router.get('/', (req, res) => {
@@ -44,7 +49,8 @@ Order.findOne({
 router.post('/dashboard', (req, res) => {
     Order.create({
         drink: req.body.drink
-       })
+  //router.post('/dashboard', withAuth, (req, res) => {
+})
         .then(dborderData => res.json(dborderData))
         .catch(err => {
         console.log(err);
@@ -55,6 +61,7 @@ router.post('/dashboard', (req, res) => {
 });
 
 // PUT - Update existing order
+//router.put('/:id', withAuth, (req, res) => {
 router.put('/:id', (req, res) => {
   Order.update(req.body, {
     where: {
@@ -74,10 +81,13 @@ router.put('/:id', (req, res) => {
   });
 });
    
-
 // Delete request for orders by id
+
 router.delete('/:id', (req, res) => {
     Order.destroy({
+
+//router.delete('/:id', withAuth, (req, res) => {
+
         where: {
           id: req.params.id
         }
