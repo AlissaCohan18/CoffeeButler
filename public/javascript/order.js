@@ -1,22 +1,22 @@
 const getOrder = () =>
-  fetch('/api/Order', {
+  fetch('/api/order', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
   });
 
-const saveOrder = (Order) =>
-  fetch('/api/Order', {
+const saveOrder = (order) =>
+  fetch('/api/order', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(Order),
+    body: JSON.stringify(order),
   });
 
 const deleteOrder = (id) =>
-  fetch(`/api/Order/${id}`, {
+  fetch(`/api/order/${id}`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
