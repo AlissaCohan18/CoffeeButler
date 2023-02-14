@@ -17,6 +17,16 @@
           <a class="nav-link text-white" href="#"></a>
         </li>
       </ul>
+       <div class="collapse navbar-collapse" id="navbarColor01">
+              <ul class="navbar-nav me-auto"></ul>
+                <form class="d-flex">
+                  <button
+                    id="log-out"
+                    class="btn btn-info my-2 my-sm-0"
+                    type="submit"
+                  >Log Out</button>
+                </form>
+            </div>
     </div>
     {{!-- functional icons --}}
 
@@ -70,6 +80,18 @@
   </button>
 </div> --}}
 {{!-- carousel end --}}
+
+
+{{!-- 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+UNCOMMENT AND VET THIS CODE TO DISPLAY ORDERS ONCE WE HAVE THAT SET UP!!! 
+    {{#each order}}
+        <div>
+            <a> You're {{order.name}} will be right up! </a>
+        </div>
+        {{/each}}
+  --}}
 
 
   <h4> New Order </h4>
@@ -273,3 +295,5 @@
 <br>
 <br>
 <br>
+
+  <script src="/javascript/logout.js"></script>
