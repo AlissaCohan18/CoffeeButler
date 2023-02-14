@@ -1,6 +1,10 @@
 const router = require("express").Router();
 
 router.get("/", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("dashboard");
+    return;
+  }
   res.render("homepage");
 });
 
@@ -9,7 +13,8 @@ router.get("/signup", (req, res) => {
 });
 
 router.get("/dashboard", (req, res) => {
-  res.render("dashboard");
+   res.render("dashboard");
 });
+  
 
 module.exports = router;

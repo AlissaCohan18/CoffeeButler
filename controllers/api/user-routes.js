@@ -19,9 +19,15 @@ router.post("/", (req, res) => {
   User.create({
     email: req.body.email,
     password: req.body.password,
-  }).then((dbUserData) => {
-    res.json(dbUserData);
-  });
+  }).then(dbUserData => {
+    req.session.save(() => {
+      req.session.user_id = dbUserData.id;
+      req.session.username = dbUserData.username;
+      req.session.loggedIn = true;
+  
+      res.json(dbUserData);
+    });
+  })
 });
 
 //user login and identity verification (/api/users/login)
@@ -41,7 +47,14 @@ router.post("/login", (req, res) => {
       res.status(400).json({ message: "Incorrect password!" });
       return;
     }
-    res.json({ user: dbUserData, message: "You are now logged in!" });
+    req.session.save(() => {
+      // declare session variables
+      req.session.user_id = dbUserData.id;
+      req.session.username = dbUserData.username;
+      req.session.loggedIn = true;
+
+      res.json({ user: dbUserData, message: 'You are now logged in!' });
+    });
   });
 });
 
