@@ -1,23 +1,23 @@
-let placeOrderBtn = document.querySelector('#pobtn');
-let cancelOrderBtn = document.querySelector('#cancelO');
-let reorderBtn = document.querySelector('#reorder');
+// let placeOrderBtn = document.querySelector('#pobtn');
+// let cancelOrderBtn = document.querySelector('#cancelO');
+// let reorderBtn = document.querySelector('#reorder');
 
 
 // TODO create event listener to append to pending orders section
 // TODO 
 
-let newOrder = document.querySelector('#inputorder');
+// let newOrder = document.querySelector('#inputorder');
 
 
 
 
-const getOrder = () =>
-  fetch('/api/order', {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
+// const getOrder = () =>
+//   fetch('/api/order', {
+//     method: 'GET',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//   });
 
   
 // const saveOrder = (order) =>
@@ -51,7 +51,7 @@ const getOrder = () =>
   // event listener
       document
         .querySelector("#pobtn")
-        .addEventListener("submit", saveOrder);
+        .addEventListener("click", saveOrder);
 
 const deleteOrder = (id) =>
   fetch(`/api/order/${id}`, {
