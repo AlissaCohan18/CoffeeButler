@@ -46,7 +46,7 @@ Order.findOne({
   });
 
 //Post request for new orders
-router.post('/dashboard', (req, res) => {
+router.post('/', (req, res) => {
     Order.create({
         drink: req.body.drink
   //router.post('/dashboard', withAuth, (req, res) => {
