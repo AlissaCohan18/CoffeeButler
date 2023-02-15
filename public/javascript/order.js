@@ -1,12 +1,9 @@
-// let placeOrderBtn = document.querySelector('#pobtn');
-// let cancelOrderBtn = document.querySelector('#cancelO');
-// let reorderBtn = document.querySelector('#reorder');
 
+let placeOrderBtn = document.querySelector('#pobtn');
+let cancelOrderBtn = document.querySelector('#cancelO');
+let reorderBtn = document.querySelector('#reorder');
+let newOrder = document.querySelector('#inputorder');
 
-// TODO create event listener to append to pending orders section
-// TODO 
-
-// let newOrder = document.querySelector('#inputorder');
 
 
 
@@ -19,17 +16,6 @@
 //     },
 //   });
 
-  
-// const saveOrder = (order) =>
-//   fetch('/api/order', {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify(order),
-//   }
-//   // append to Pending Orders
-//   );
 
   async function saveOrder(event) {
     event.preventDefault();
@@ -49,9 +35,9 @@
   };
 
   // event listener
-      document
-        .querySelector("#pobtn")
-        .addEventListener("click", saveOrder);
+
+      document.getElementById("pobtn").addEventListener("click", saveOrder);
+
 
 const deleteOrder = (id) =>
   fetch(`/api/order/${id}`, {
@@ -61,17 +47,3 @@ const deleteOrder = (id) =>
     },
   });
 
-//   let newOrder = "";
-// function placeOrder(event) {
-//     //once order is placed it is saved to db
-//     //post 
-// }
-// function deleteOrder() {
-//   //delete request 
-// }
-
-//   document.getElementById('reorder').addEventListener('click', placeOrder, true);
-
-//   document.getElementById('delete').addEventListener('click',deleteOrder, true);
-
-//   document.getElementById('order').addEventListener('click', placeOrder, true);
