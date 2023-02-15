@@ -127,7 +127,7 @@ UNCOMMENT AND VET THIS CODE TO DISPLAY ORDERS ONCE WE HAVE THAT SET UP!!!
             <div class="container">
               <div class="card float-right col" style="width: 18rem;">
                 {{!-- drink box --}}
-                <div class="card-header text-white" style="background-color:#967969">
+                <div  class="card-header text-white" style="background-color:#967969">
                   Drink Order
                 </div>
                 <ul class="list-group list-group-flush">
@@ -156,10 +156,10 @@ UNCOMMENT AND VET THIS CODE TO DISPLAY ORDERS ONCE WE HAVE THAT SET UP!!!
                   <li class="list-group-item">
                     <div class="input-group input-group-sm mb-3">
                       
-                      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Quantity & Size">
+                      <input id="inputorder" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Quantity & Size">
                     </div>
                   </li>
-                  <a href="#" class="btn text-white" style="background-color:#808000;"> Place Order</a>
+                  <button id ="pobtn" href="#" class="btn text-white" style="background-color:#808000;" type="submit"> Place Order</button>
                 </ul>
               </div>
               <br>
@@ -217,7 +217,7 @@ UNCOMMENT AND VET THIS CODE TO DISPLAY ORDERS ONCE WE HAVE THAT SET UP!!!
               <div> MenuItem | $Price</div>
               <div> AddOns | $Price</div>
             </ul>
-            <a href="#" class="btn text-white " style="background-color:#800000;" id="delete">Cancel My Order</a>
+            <a id="cancelO" href="#" class="btn text-white " style="background-color:#800000;" id="delete">Cancel My Order</a>
           </div>
           {{!-- order 2 --}}
           <div class="card-body">
@@ -227,7 +227,7 @@ UNCOMMENT AND VET THIS CODE TO DISPLAY ORDERS ONCE WE HAVE THAT SET UP!!!
               <div> MenuItem | $Price</div>
               <div> AddOns | $Price</div>
             </ul>
-            <a href="#" class="btn text-white" style="background-color:#800000;" id="delete">Cancel My Order</a>
+            <a id="cancelO"  href="#" class="btn text-white" style="background-color:#800000;" id="delete">Cancel My Order</a>
           </div>
         </div>
       </div>
@@ -246,7 +246,7 @@ UNCOMMENT AND VET THIS CODE TO DISPLAY ORDERS ONCE WE HAVE THAT SET UP!!!
 
               <div> AddOns | $Price</div>
             </ul>
-            <a href="#" class="btn text-white " style="background-color:#C4A484;" id="reorder">Reorder</a>
+            <a id="reorder"  href="#" class="btn text-white " style="background-color:#C4A484;" id="reorder">Reorder</a>
           </div>
           {{!-- order2 --}}
           <div class="card-body">
@@ -256,7 +256,7 @@ UNCOMMENT AND VET THIS CODE TO DISPLAY ORDERS ONCE WE HAVE THAT SET UP!!!
               <div> MenuItem | $Price</div>
               <div> AddOns | $Price</div>
             </ul>
-            <a href="#" class="btn text-white" style="background-color:#C4A484;" id="reorder">Reorder</a>
+            <a id="reorder"  href="#" class="btn text-white" style="background-color:#C4A484;" id="reorder">Reorder</a>
           </div>
           {{!-- order3 --}}
           <div class="card-body">
@@ -267,7 +267,7 @@ UNCOMMENT AND VET THIS CODE TO DISPLAY ORDERS ONCE WE HAVE THAT SET UP!!!
 
               <div> AddOns | $Price</div>
             </ul>
-            <a href="#" class="btn text-white " style="background-color:#C4A484;" id="reorder">Reorder</a>
+            <a id="reorder" href="#" class="btn text-white " style="background-color:#C4A484;" id="reorder">Reorder</a>
           </div>
 
 
@@ -287,3 +287,4 @@ UNCOMMENT AND VET THIS CODE TO DISPLAY ORDERS ONCE WE HAVE THAT SET UP!!!
 <br>
 
   <script src="/javascript/logout.js"></script>
+   <script src="/javascript/order.js"></script>
