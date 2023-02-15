@@ -48,60 +48,6 @@
 <br>
 <br>
 <br>
-
-  {{!-- <div class="container">
-    <h2>Today's Deals</h2>
-    <div id="myCarousel" class="carousel slide" data-ride="carousel"> --}}
-      <!-- Indicators -->
-      {{!-- <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol> --}}
-
-      <!-- Wrapper for slides -->
-      {{!-- <div class="carousel-inner">
-
-        <div class="carousel-item active">
-          <img src="/public/stylesheets/images/icedcoffeepic.jpeg" alt="Image 1" style="width:100%;">
-          <div class="carousel-caption">
-            <h3>Coffee Treats!</h3>
-            <p></p>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <img src="/public/stylesheets/images/userbackground.webp" alt="Image 2" style="width:100%;">
-          <div class="carousel-caption">
-            <h3>Pastries Coming Soon!</h3>
-            <p></p>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <img src="https://cdn1.imggmi.com/uploads/2019/11/25/678c2beaa31d399a502f99c591908e5b-full.jpg" alt="New York" style="width:100%;">
-          <div class="carousel-caption">
-            <h3></h3>
-            <p></p>
-          </div>
-        </div>
-
-      </div> --}}
-
-      <!-- Left and right controls -->
-      {{!-- <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </a>
-      <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </a>
-    </div>
-  </div> --}}
-
-  <!--slideshow ends-->
-
-
-
 {{!-- 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -112,6 +58,58 @@ UNCOMMENT AND VET THIS CODE TO DISPLAY ORDERS ONCE WE HAVE THAT SET UP!!!
         </div>
         {{/each}}
   --}}
+
+{{!-----Slide Show Begins---  Note:When src your images be sure to copy the image address and paste it in the image src location you would like for it to go --}}
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img
+        src="https://t3.ftcdn.net/jpg/03/15/40/34/360_F_315403482_MVo1gSOOfvwCwhLZ9hfVSB4MZuQilNrx.jpg"
+        class="d-block w-100"
+        alt="first slide"
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="https://milkandpop.com/wp-content/uploads/2020/11/mocha-latte-13-720x540.jpg"
+        class="d-block w-100"
+        alt="second slide"
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtwpNJUPNoKtlhNUugpY0UpKEJ287owMH5kw&usqp=CAU"
+        class="d-block w-100"
+        alt="third slide"
+      />
+    </div>
+  </div>
+  <a
+    class="carousel-control-prev"
+    href="#carouselExampleIndicators"
+    role="button"
+    data-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a
+    class="carousel-control-next"
+    href="#carouselExampleIndicators"
+    role="button"
+    data-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+{{!-- ----slide show ends---- --}}
 
 
   <h4> New Order </h4>
@@ -164,6 +162,8 @@ UNCOMMENT AND VET THIS CODE TO DISPLAY ORDERS ONCE WE HAVE THAT SET UP!!!
               </div>
               <br>
               <br>
+
+              
    {{!-- pastries box --}}
               {{!-- <div class="card float-right col" style="width: 18rem;">
                 <div class="card-header text-white" style="background-color:#9A2A2A">
