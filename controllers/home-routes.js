@@ -21,9 +21,8 @@ router.get("/dashboard", (req, res) => {
       // router.get("/dashboard", (req, res) => {
       //   Order.findAll({
       //     attributes: [
-      //       "id",
-      //       "post_url",
-      //       "title",
+      //      
+      //       "drink",
       //       "created_at",
       //     ],
       //   })
