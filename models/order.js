@@ -18,15 +18,15 @@ Order.init(
             autoIncrement: true
         },
     // define menu column in table
-    menuitem: {
+    drink: {
         type: DataTypes.TEXT,
         allowNull:false
     },
 
     // define add-ons column in table | this will be an additional drink or snack etc.
-    addon: {
-        type: DataTypes.TEXT,
-    },
+    // pastry: {
+    //     type: DataTypes.TEXT,
+    // },
     // what will the user name their drink order? 
     // this should also allow them to reorder nicknamed drinks?
     nickname:{
@@ -38,12 +38,10 @@ Order.init(
         },
      },
 
-
-
         },
 
         {sequelize,
-        timestamps: false,
+        timestamps: true,
         freezeTableName: true,
         underscored: true,
         modelName: "order",
