@@ -3,12 +3,14 @@ const Sequelize = require('sequelize');
 
 require('dotenv').config();
 
-// Connect to our database locally
+//Connect to our database locally
+
   const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
     host: 'localhost',
     dialect: 'mysql',
     port: 3306
   });
+
 
 // //Using Heroku's JAWSDB:
 //     let sequelize;
@@ -22,5 +24,6 @@ require('dotenv').config();
 //         port: 3306
 //       });
 //     }
+
 
 module.exports = sequelize;
