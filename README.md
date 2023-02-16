@@ -1,6 +1,7 @@
 ## The Coffee Butler
 
 ## Description:
+Application allows users to create an account and then they are able to place a coffee order. Once their order is placed you will see the pending order. Previous orders are stored and they are able to be reordered.
 
 ## Table of Contents
 * [Installation](#installation)
@@ -11,14 +12,22 @@
 ## Application Mock-Up
 
 ## Built With
+-HTML   
+-Handlebars  
+-CSS  
+-Bootstrap  
+-JavaScript  
+-Node  
+-mySQL  
 
 ## Deployed Application URL
 
 ## Installation
 
 ## Usage
-
-## License
+This application is used for coffee lovers everywhere to get their favorite cup of coffee ordered and ready for them.
+## Github Repo
+[https://github.com/AlissaCohan18/CoffeeButler](https://github.com/AlissaCohan18/CoffeeButler)
 
 ## Contributing/Github Repo's
 If you'd like to see more of our work check out our repositories.
