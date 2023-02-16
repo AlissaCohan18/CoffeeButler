@@ -12,7 +12,7 @@ require('dotenv').config();
   // });
 
 
-//Using Heroku's JAWSDB:
+//Using Heroku's JAWSDB
     let sequelize;
 
     if (process.env.JAWSDB_URL) {
