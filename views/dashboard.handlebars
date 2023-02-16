@@ -8,10 +8,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ">
         <li class="nav-item">
-          <a class="nav-link active text-white" aria-current="page" href="#"> Order Dashboard</a>
+          <a class="nav-link active text-white" aria-current="page" href="#"> </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Merch</a>
+          <a class="nav-link text-white" href="#"></a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="#"></a>
@@ -126,7 +126,7 @@
                   <li class="list-group-item">
                     <div class="form-check">
                       <label class="form-check-label" for="flexCheckDefault">
-                       Small | $23.99
+                       SMALL | $23.99
                       </label>
                     </div>
                   </li>
@@ -134,7 +134,7 @@
                     <div class="form-check">
                       
                       <label class="form-check-label" for="flexCheckDefault">
-                        Medium | $43.99
+                        MEDIUM | $43.99
                       </label>
                     </div>
                   </li>
@@ -156,38 +156,6 @@
               </div>
               <br>
               <br>
-
-              
-   {{!-- pastries box --}}
-              {{!-- <div class="card float-right col" style="width: 18rem;">
-                <div class="card-header text-white" style="background-color:#9A2A2A">
-                  Tasty Pastries
-                </div>
-                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <div class="input-group input-group-sm mb-3"> --}}
-                      {{!-- <span class="input-group-text" id="inputGroup-sizing-sm">Pastry</span> --}}
-                      {{!-- <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Quantity & Pastry">
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="form-check">
-                      <label class="form-check-label" for="flexCheckDefault">
-                       Croissant | $23.00
-                      </label>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="form-check">
-                      
-                      <label class="form-check-label" for="flexCheckDefault">
-                        Danish | $24.00
-                      </label>
-                    </div>
-                  </li>
-                </ul>
-              </div> --}}
-
               <br>
               <br>
             </div>
@@ -197,92 +165,26 @@
       </div>
     </div>
 
+    
+
     {{!-- Pending Orders Column--}}
     <div class="col-md-4">
-      <h4> Your Orders</h4>
+      <h4> Your Order</h4>
       <div>
         <div class="card w-75">
           {{!-- order1 --}}
           <div class="card-body">
             <h5 class="card-title"> </h5>
             {{#each orders as |order|}}
-        <div>
-            <p> You're {{order.drink}} will be right up! </p>
-        </div>
-        {{/each}}
-            <p> Today @ 2:00pm</p>
-            <ul class="card-text">
-              <div> MenuItem | $Price</div>
-              <div> AddOns | $Price</div>
-            </ul>
-            <a id="cancelO" href="#" class="btn text-white " style="background-color:#800000;" id="delete">Cancel My Order</a>
-          </div>
-          {{!-- order 2 --}}
-          <div class="card-body">
-            <h5 class="card-title">HumpDay Special </h5>
-            <p> Today @ 2:04pm</p>
-            <ul class="card-text">
-              <div> MenuItem | $Price</div>
-              <div> AddOns | $Price</div>
-            </ul>
-            <a id="cancelO"  href="#" class="btn text-white" style="background-color:#800000;" id="delete">Cancel My Order</a>
-          </div>
-        </div>
-      </div>
-      <br>
-      <br>
-      {{!-- Previous Orders Section --}}
-      <h4> Previous Orders</h4>
-      <div>
-        <div class="card w-75">
-          {{!-- order1 --}}
-          <div class="card-body">
-            <h5 class="card-title"> </h5>
-                      <div> </div>
-            <p> </p>
-            <ul class="card-text">
-    
-              <div> AddOns | $Price</div>
-            </ul>
-            <a id="reorder"  href="#" class="btn text-white " style="background-color:#C4A484;" id="reorder">Reorder</a>
-          </div>
-          {{!-- order2 --}}
-          <div class="card-body">
-            <h5 class="card-title">HumpDay Special </h5>
-            <p> Date Ordered: 02.13.2023</p>
-            <ul class="card-text">
-              <div> MenuItem | $Price</div>
-              <div> AddOns | $Price</div>
-            </ul>
-            <a id="reorder"  href="#" class="btn text-white" style="background-color:#C4A484;" id="reorder">Reorder</a>
-          </div>
-          {{!-- order3 --}}
-          <div class="card-body">
-            <h5 class="card-title">Latenight Burst </h5>
-            <p> Date Ordered: 02.11.2023</p>
-            <ul class="card-text">
-              <div> MenuItem | $Price</div>
-
-              <div> AddOns | $Price</div>
-            </ul>
-            <a id="reorder" href="#" class="btn text-white " style="background-color:#C4A484;" id="reorder">Reorder</a>
-          </div>
-
-
-        </div>
-      </div>
-
-
-
+            <div>
+              <p> Your {{order.drink}} will be right up! </p>
+            </div>
+            {{/each}}
     </div>
-  </div>
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+  
+
+
+
 
   <script src="/javascript/logout.js"></script>
    <script src="/javascript/order.js"></script>
