@@ -39,6 +39,9 @@ let newOrder = document.querySelector('#inputorder');
       document.getElementById("pobtn").addEventListener("click", saveOrder);
 
 
+
+
+      
 const deleteOrder = (id) =>
   fetch(`/api/order/${id}`, {
     method: 'DELETE',
@@ -47,3 +50,4 @@ const deleteOrder = (id) =>
     },
   });
 
+  
