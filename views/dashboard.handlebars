@@ -48,16 +48,8 @@
 <br>
 <br>
 <br>
-{{!-- 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-UNCOMMENT AND VET THIS CODE TO DISPLAY ORDERS ONCE WE HAVE THAT SET UP!!! 
-    {{#each order}}
-        <div>
-            <a> You're {{order.drink}} will be right up! </a>
-        </div>
-        {{/each}}
-  --}}
+
+
 
 {{!-----Slide Show Begins---  Note:When src your images be sure to copy the image address and paste it in the image src location you would like for it to go --}}
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -116,6 +108,7 @@ UNCOMMENT AND VET THIS CODE TO DISPLAY ORDERS ONCE WE HAVE THAT SET UP!!!
 
 
   <h4> New Order </h4>
+
   <div class="row">
     {{!-- drink ads carousel column --}}
     <div class="col-md-8">
@@ -214,7 +207,12 @@ UNCOMMENT AND VET THIS CODE TO DISPLAY ORDERS ONCE WE HAVE THAT SET UP!!!
         <div class="card w-75">
           {{!-- order1 --}}
           <div class="card-body">
-            <h5 class="card-title">LowKey Sleepy </h5>
+            <h5 class="card-title"> </h5>
+            {{#each orders as |order|}}
+        <div>
+            <p> You're {{order.drink}} will be right up! </p>
+        </div>
+        {{/each}}
             <p> Today @ 2:00pm</p>
             <ul class="card-text">
               <div> MenuItem | $Price</div>
