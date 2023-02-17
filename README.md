@@ -21,8 +21,8 @@ Application allows users to create an account and then they are able to place a 
 -mySQL  
 
 ## Deployed Application URL
+[Coffee Butler](https://coffee-butler-app.herokuapp.com/) 
 
-## Installation
 
 ## Usage
 This application is used for coffee lovers everywhere to get their favorite cup of coffee ordered and ready for them.
